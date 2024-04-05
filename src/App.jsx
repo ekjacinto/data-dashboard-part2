@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import Sidebar from "./components/Sidebar";
 import MainDashboard from "./components/MainDashboard";
-import SummaryStat from "./components/SummaryStat";
 
 function App() {
   const [data, setData] = useState([]);
@@ -31,7 +30,6 @@ function App() {
 
   return (
     <div>
-      <SummaryStat toggle={toggle} data={data} />
       <Sidebar toggle={toggle} handleToggle={handleToggle} />
       <MainDashboard toggle={toggle} data={data} />
     </div>

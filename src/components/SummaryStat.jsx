@@ -12,17 +12,17 @@ const SummaryStat = ({ data }) => {
   const mostOwnedGameName = data.length > 0 ? gameWithMostOwned.name : "";
 
   return (
-    <div className="top-[2.9%] left-[12.5%] absolute flex gap-4 justify-evenly">
-      <div className="flex flex-col justify-center items-center w-[31rem] h-[14rem] bg-[#131313] rounded-2xl text-3xl gap-4">
+    <div className={`flex justify-center ml-auto container mr-12 pt-8 gap-4`}>
+      <div className="flex flex-col justify-center items-center w-[33rem] h-[14rem] bg-[#131313] rounded-2xl text-3xl gap-4 p-2">
         <h1 className="font-bold">Total Number of Games:</h1>
         <p>{totalGames}</p>
       </div>
-      <div className="flex flex-col justify-center items-center w-[31rem] h-[14rem] bg-[#131313] rounded-2xl text-3xl gap-4">
+      <div className="flex flex-col justify-center items-center w-[33rem] h-[14rem] bg-[#131313] rounded-2xl text-3xl gap-4 p-2">
         <h1 className="font-bold">Average Rating of all Games:</h1>
         <p>{averageRating.toFixed(2)}</p>
       </div>
-      <div className="flex flex-col justify-center items-center w-[30.25rem] h-[14rem] bg-[#131313] rounded-2xl text-3xl gap-4">
-        <h1 className="font-bold">The Game With Most Owned Copies:</h1>
+      <div className="flex flex-col justify-center items-center w-[33rem] h-[14rem] bg-[#131313] rounded-2xl text-3xl gap-4 p-2">
+        <h1 className="font-bold">Most Owned Copies:</h1>
         <p>{mostOwnedGameName}</p>
       </div>
     </div>

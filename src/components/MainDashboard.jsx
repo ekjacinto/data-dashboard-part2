@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
+import SummaryStat from "./SummaryStat";
 
 const MainDashboard = ({ toggle, data }) => {
   const [filteredData, setFilteredData] = useState(data);
@@ -32,11 +33,17 @@ const MainDashboard = ({ toggle, data }) => {
   };
 
   return (
-    <div>
+    <div
+      className={`flex flex-col justify-center items-center ${
+        toggle
+          ? "ml-[32rem] w-[70%] duration-[400ms]"
+          : "w-[100%] duration-[750ms]"
+      }
+      transition-all`}
+    >
+      <SummaryStat toggle={toggle} data={data} />
       <div
-        className={`flex flex-col justify-center container ml-auto mr-12 p-6 mt-[275px] bg-[#131313] h-[95%] ${
-          toggle ? "w-[71%]" : "w-[85%]"
-        } h-[600px] rounded-2xl transition-all duration-500`}
+        className={`flex flex-col container ml-auto mr-12 p-6 mt-[15px] bg-[#131313] rounded-2xl`}
       >
         <div className="mb-4 flex justify-center items-center gap-2">
           <input
@@ -69,7 +76,7 @@ const MainDashboard = ({ toggle, data }) => {
               onClick={filterDataByMetacritic}
               className="mr-2 bg-green-600 text-white px-4 py-2 rounded-md"
             >
-              Search By Year
+              Search By Metacritic
             </button>
           </div>
         </div>
