@@ -27,6 +27,7 @@ The following **additional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
+![datadashboard2](https://github.com/ekjacinto/data-dashboard-part2/assets/109046831/5e23d4e9-20de-418a-ab2f-22d37dc3e12b)
 
 <!-- Replace this with whatever GIF tool you used! -->
 
